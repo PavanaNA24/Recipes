@@ -1,0 +1,6 @@
+<!-- TODO 1: Create a unordered list having an id of 'recipes'. 
+	Using structural directives, output all the recipes in the form of list items.
+	Using Slice Pipe, limit the output to 10 letters.  -->
+<ul id="recipes">
+	<li *ngFor="let recipe of recipes">{{ (recipe | slice:0:10) + (recipe.length > 10 ? '...' : '')}}</li>
+</ul>
